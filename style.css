@@ -8,6 +8,7 @@ body {
   align-items: center;
 }
 
+/* Form container */
 .form-container {
   background: #ffffff;
   padding: 30px 40px;
@@ -16,12 +17,25 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Headings */
+h1 {
+  color: #0a3cff;
+  text-align: center;
+}
+
 h2 {
   text-align: center;
   color: #333;
   margin-bottom: 20px;
 }
 
+/* Text */
+p, li {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Labels */
 label {
   font-weight: bold;
   color: #555;
@@ -29,6 +43,7 @@ label {
   display: block;
 }
 
+/* Inputs */
 input[type="text"],
 input[type="password"] {
   width: 100%;
@@ -39,6 +54,7 @@ input[type="password"] {
   border-radius: 4px;
 }
 
+/* Submit button */
 input[type="submit"] {
   width: 100%;
   background: #667eea;
