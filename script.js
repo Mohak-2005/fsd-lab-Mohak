@@ -1,29 +1,29 @@
-function validateForm() {
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
-  var mobile = document.getElementById("mobile").value;
+let display = document.getElementById("display");
 
-  if (name === "") {
-    alert("Name must not be empty");
-    return false;
+function appendValue(val) {
+  if (display.value === "0") display.value = "";
+  display.value += val;
+}
+
+function clearDisplay() {
+  display.value = "0";
+}
+
+function deleteLast() {
+  display.value = display.value.slice(0, -1);
+  if (display.value === "") display.value = "0";
+}
+
+function appendSign() {
+  if (display.value !== "0") {
+    display.value = (parseFloat(display.value) * -1).toString();
   }
+}
 
-  if (email === "") {
-    alert("Email must not be empty");
-    return false;
+function calculate() {
+  try {
+    display.value = eval(display.value);
+  } catch {
+    alert("Error");
   }
-
-  if (password.length < 6) {
-    alert("Password must be at least 6 characters long");
-    return false;
-  }
-
-  if (isNaN(mobile) || mobile.length !== 10) {
-    alert("Enter valid 10-digit mobile number");
-    return false;
-  }
-
-  alert("Form submitted successfully!");
-  return true;
 }

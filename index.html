@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mohak Gujarathi | CV</title>
+  <title>Dark Calculator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Mohak Padmesh Gujarathi</h1>
-  <p>TY CSE Student | Web Developer</p>
+<div class="calculator">
 
-  <h2>Education</h2>
-  <p>MIT-WPU, Computer Engineering</p>
+  <input type="text" id="display" value="0" disabled>
 
-  <h2>Skills</h2>
-  <ul>
-    <li>HTML, CSS, JavaScript</li>
-    <li>Python, C++</li>
-    <li>Git & GitHub</li>
-  </ul>
+  <div class="buttons">
 
-  <h2>Projects</h2>
-  <p>Personal CV Website</p>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="deleteLast()">⌫</button>
+    <button onclick="appendValue('%')">%</button>
+    <button class="op" onclick="appendValue('/')">÷</button>
 
-  <h2>Contact</h2>
-  <p>Email: mohak.gujarathi@mitwpu.edu.in</p>
+    <button onclick="appendValue('7')">7</button>
+    <button onclick="appendValue('8')">8</button>
+    <button onclick="appendValue('9')">9</button>
+    <button class="op" onclick="appendValue('*')">×</button>
 
+    <button onclick="appendValue('4')">4</button>
+    <button onclick="appendValue('5')">5</button>
+    <button onclick="appendValue('6')">6</button>
+    <button class="op" onclick="appendValue('-')">−</button>
+
+    <button onclick="appendValue('1')">1</button>
+    <button onclick="appendValue('2')">2</button>
+    <button onclick="appendValue('3')">3</button>
+    <button class="op" onclick="appendValue('+')">+</button>
+
+    <button onclick="appendSign()">±</button>
+    <button onclick="appendValue('0')">0</button>
+    <button onclick="appendValue('.')">.</button>
+    <button class="equal" onclick="calculate()">=</button>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

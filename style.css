@@ -1,71 +1,63 @@
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #667eea, #764ba2);
-  height: 100vh;
-  margin: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: Arial;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
-/* Form container */
-.form-container {
-  background: #ffffff;
-  padding: 30px 40px;
-  width: 350px;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Headings */
-h1 {
-  color: #0a3cff;
+.calculator {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 300px;
   text-align: center;
 }
 
-h2 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Text */
-p, li {
-  font-size: 16px;
-  color: #555;
-}
-
-/* Labels */
-label {
-  font-weight: bold;
-  color: #555;
-  margin-top: 10px;
-  display: block;
-}
-
-/* Inputs */
-input[type="text"],
-input[type="password"] {
+#display {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
+  height: 50px;
+  font-size: 24px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  text-align: right;
 }
 
-/* Submit button */
-input[type="submit"] {
-  width: 100%;
-  background: #667eea;
-  color: white;
-  padding: 10px;
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
   border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: 8px;
   cursor: pointer;
+  background: #f1f1f1;
 }
 
-input[type="submit"]:hover {
-  background: #5a67d8;
+button:hover {
+  background: #ddd;
+}
+
+.op {
+  background: #ff9500;
+  color: white;
+}
+
+.equal {
+  background: #4CAF50;
+  color: white;
+}
+
+.clear {
+  background: #e74c3c;
+  color: white;
+}
+
+.zero {
+  grid-column: span 2;
 }
